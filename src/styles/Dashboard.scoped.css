@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.navbar{
+    padding: 10px;
+    margin: 12px;
+}
+
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.nav-items li{
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.nav-items a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.active a{
+    color: white;
+    background: black;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+
+img {
+    max-width:500px;
+    max-height:90%;
+    width: auto;
+    height: auto;
+    filter: grayscale(100%);
+    transition: 1.3s;
+    padding: 10px;
+    border-radius: 50px;
+}
+/*img:hover {*/
+/*    filter: grayscale(0%) drop-shadow(2px 2px 6px #000000);*/
+/*}*/
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    /*font-family: "Montserrat", serif;*/
+}
+.fade-img {
+    position: relative;
+}
+
+.fade-img:after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    height: 50%;
+}
+
+.intro-text{
+    display: flex;
+    color: black;
+    flex-direction: column;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: start;
+    justify-content: center;
+}
+
+.intro-text li{
+    list-style-type: none;
+}
+
+.bottom{
+    display:flex;
+    position: absolute;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px;
+    transform: translateY(30%);
+}
+
+a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+a.social:hover {
+    transform: translateY(-6px) scale(1.2);
+}
+
+a.linkedIn {
+    color: white;
+}
+
+a.facebook {
+    color: white;
+}
+
+a.twitter {
+    color: white;
+}
+
+a.instagram {
+    color: white;
+}
+
+a.github {
+    color: white;
+}
+a.phone{
+    color: white;
+}
+a.gmail{
+    color: white;
+}
+a.stack-of{
+    color: white;
+}
