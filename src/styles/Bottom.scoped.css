@@ -1,0 +1,71 @@
+.bottom{
+    display:flex;
+    position: absolute;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    width: 100%;
+    background: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px;
+    animation: move-bottom-up 1s ease-in-out;
+}
+
+@keyframes move-bottom-up{
+    0%   { transform: translateY(100%); }
+    100% { transform: translateY(0%); }
+}
+
+a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+a.social:hover {
+    transform: translateY(-6px) scale(1.2);
+}
+
+/*a.linkedIn {
+    color: cornflowerblue;
+}
+
+a.twitter {
+    color: cornflowerblue;
+}
+
+a.instagram {
+    color: darkred;
+}
+
+a.github {
+    color: white;
+}
+
+a.stack-of{
+    color: orange;
+}*/
+
+a.linkedIn {
+    color: white;
+}
+
+a.twitter {
+    color: white;
+}
+
+a.instagram {
+    color: white;
+}
+
+a.github {
+    color: white;
+}
+
+a.stack-of{
+    color: white;
+}
