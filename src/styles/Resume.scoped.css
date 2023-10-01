@@ -8,17 +8,19 @@
     justify-content: center;
     margin-top: 2em;
 }
+
 .resume {
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 100%;
-    padding-top: 141.4286%;
+    padding-top: 113%;
     padding-bottom: 0;
     box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
     margin-top: 1.6em;
     margin-bottom: 0.9em;
-    border-radius: 8px;
+    border-radius: 2%;
     will-change: transform;
+    animation: move-bottom-up 1s ease-in-out;
 }
 
 .resume iframe {
@@ -30,4 +32,40 @@
     border: none;
     padding: 0;
     margin: 0;
+    border-radius: 2%;
 }
+
+@keyframes move-bottom-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.button {
+   cursor: pointer;
+    background-color: #000000;
+    border-radius: 8px;
+    border: none;
+    appearance: none;
+    padding: 10px 15px 10px 15px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    transition: 1s;
+    font-family: "Montserrat", serif;
+}
+
+.button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-4px);
+}
+

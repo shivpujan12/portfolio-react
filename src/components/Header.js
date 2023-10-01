@@ -11,30 +11,39 @@ export default function() {
 
     useEffect(() => {
         if (window.location.pathname === "/resume") {
+            projectsRef.current.classList.remove("active");
+            homeRef.current.classList.remove("active");
             resumeRef.current.classList.add("active");
+            navigate("/resume");
         } else if (window.location.pathname === "/projects") {
+            resumeRef.current.classList.remove("active");
+            homeRef.current.classList.remove("active");
             projectsRef.current.classList.add("active");
+            navigate("/projects")
         } else {
+            resumeRef.current.classList.remove("active");
+            projectsRef.current.classList.remove("active");
             homeRef.current.classList.add("active");
+            navigate("/home")
         }
     }, []);
 
-    const setClassName = (e, name, className) => {
+    const setClassName = (e, name) => {
         e.preventDefault();
         if (name === "resume") {
             projectsRef.current.classList.remove("active");
             homeRef.current.classList.remove("active");
-            resumeRef.current.classList.add(className);
+            resumeRef.current.classList.add("active");
             navigate("/resume");
         } else if (name === "projects") {
             resumeRef.current.classList.remove("active");
             homeRef.current.classList.remove("active");
-            projectsRef.current.classList.add(className);
+            projectsRef.current.classList.add("active");
             navigate("/projects")
         } else if (name === "home") {
             resumeRef.current.classList.remove("active");
             projectsRef.current.classList.remove("active");
-            homeRef.current.classList.add(className);
+            homeRef.current.classList.add("active");
             navigate("/home")
         }
     }
@@ -42,13 +51,13 @@ export default function() {
         <div className="navbar">
             <div className="nav-items">
                 <li ref={homeRef} className="active"
-                    onClick={(e) => setClassName(e, "home", "active")}
+                    onClick={(e) => setClassName(e, "home")}
                 ><a href="/">&lt;dev-shivpujan /&gt;</a></li>
                 <li ref={resumeRef}
-                    onClick={(e) => setClassName(e, "resume", "active")}
+                    onClick={(e) => setClassName(e, "resume")}
                 ><a href="/">Resume</a></li>
                 <li ref={projectsRef}
-                    onClick={(e) => setClassName(e, "projects", "active")}
+                    onClick={(e) => setClassName(e, "projects")}
                 ><a href="/">Projects</a></li>
                 {/*<li><a href="/about"></a></li>*/}
             </div>
