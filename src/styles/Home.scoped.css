@@ -46,7 +46,6 @@ img {
     fill: #023F92;
     width: 50vmax;
     z-index: -1;
-    animation: move-blob-2 10s ease-in-out infinite;
     transform-origin: 50% 50%;
 }
 
@@ -54,7 +53,7 @@ img {
     display: flex;
     color: black;
     flex-direction: column;
-    font-size: 70px;
+    font-size: 450%;
     font-weight: bold;
     text-align: start;
     justify-content: center;
@@ -68,4 +67,5 @@ img {
 
 .intro-text li{
     list-style-type: none;
+
 }
