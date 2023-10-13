@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import WebProject from "./components/WebProject";
 import AndroidProject from "./components/AndroidProject";
-import UpcomingProjects from "./components/UpcomingProjects";
+import WorkEx from "./components/WorkEx";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
                       <Route path="" element={<WebProject/>}/>
                       <Route path="web" element={<WebProject/>}/>
                       <Route path="android" element={<AndroidProject/>}/>
-                      <Route path="upcoming" element={<UpcomingProjects/>}/>
+                      <Route path="upcoming" element={<WorkEx/>}/>
                   </Route>
                   <Route path="*" element={<NoPage/>}/>
               </Routes>

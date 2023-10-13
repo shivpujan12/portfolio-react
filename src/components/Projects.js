@@ -8,14 +8,14 @@ import dpsImage from "../assets/dps-image.png"
 import {Link, Outlet, Route, Routes, useNavigate} from "react-router-dom";
 import WebProject from "./WebProject";
 import AndroidProject from "./AndroidProject";
-import UpcomingProjects from "./UpcomingProjects";
+import WorkEx from "./WorkEx";
 
 
 export default function Projects(){
 
     const webRef = useRef(null);
     const androidRef = useRef(null);
-    const upcomingRef = useRef(null);
+    const workEx = useRef(null);
     const navbarRef = useRef(null);
     const navigate = useNavigate();
 
@@ -37,18 +37,18 @@ export default function Projects(){
         e.preventDefault();
         if (name === "web") {
             androidRef.current.classList.remove("active");
-            upcomingRef.current.classList.remove("active");
+            workEx.current.classList.remove("active");
             webRef.current.classList.add("active");
             // navigate("/projects/web");
         } else if (name === "android") {
             webRef.current.classList.remove("active");
-            upcomingRef.current.classList.remove("active");
+            workEx.current.classList.remove("active");
             androidRef.current.classList.add("active");
             // navigate("/projects/android");
-        } else if (name === "upcoming") {
+        } else if (name === "workEx") {
             webRef.current.classList.remove("active");
             androidRef.current.classList.remove("active");
-            upcomingRef.current.classList.add("active");
+            workEx.current.classList.add("active");
             // navigate("/projects/upcoming");
         }
     }
@@ -62,8 +62,8 @@ export default function Projects(){
                         onClick={(e) => setClassName(e, "web")}><Link to="/projects/web">Web</Link></li>
                     <li ref={androidRef}
                         onClick={(e) => setClassName(e, "android")}><Link to="/projects/android">Android</Link></li>
-                    <li ref={upcomingRef}
-                        onClick={(e) => setClassName(e, "upcoming")}><Link to="/projects/upcoming">Upcoming</Link></li>
+                    <li ref={workEx}
+                        onClick={(e) => setClassName(e, "workEx")}><Link to="/projects/upcoming">WorkEx</Link></li>
                 </div>
             </div>
             <Outlet className="project-content"/>
