@@ -1,6 +1,6 @@
 import "../styles/AndroidProjects.scoped.css";
 import {useEffect, useRef, useState} from "react";
-import locationPicker from "../assets/LocationPicker/screen.gif";
+import locationPicker from "../assets/screen.gif";
 import sankalan from "../assets/sankalan.gif";
 import fiestron from "../assets/fiestron.gif";
 import multilingual from "../assets/multilingual.webp";
@@ -19,8 +19,8 @@ export default function AndroidProject() {
         {name: "Music Player", image: android},
         {name: "Sankalan 2k23", image: sankalan},
         {name: "Thought board", image: thaught},
-        {name: "Shared Clipboard", image: android
-    }]);
+        {name: "Shared Clipboard", image: android}
+    ]);
 
     return (
         <div ref={containerRef} className="container">
