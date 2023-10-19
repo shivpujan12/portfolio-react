@@ -3,6 +3,7 @@ import '../styles/Bottom.scoped.css';
 import '../styles/Home.scoped.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faInstagram, faLinkedinIn, faStackOverflow, faTwitter} from "@fortawesome/free-brands-svg-icons";
+import Typewriter from 'typewriter-effect';
 
 export default function Home(){
     return (
@@ -11,7 +12,14 @@ export default function Home(){
                 <div className="intro-text">
                     <li>hi!, I'm</li>
                     <li>Shivpujan yadav</li>
-                    <li>a Software Developer</li>
+                    {/*<li>a Software Developer</li>*/}
+                    <Typewriter
+                        options={{
+                            strings: ['a Software Dev.', 'an Android Dev.', 'a Web Dev.'],
+                            autoStart: true,
+                            loop: true,
+                        }}
+                    />
                 </div>
                 <div className="fade-img">
                     <img src={SomeImage} alt="profile"/>

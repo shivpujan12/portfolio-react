@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Pixelify+Sans&display=swap');
 .container{
     display: flex;
     flex-direction: row;
@@ -50,6 +51,7 @@ img {
 }
 
 .intro-text{
+    width: 50%;
     display: flex;
     color: black;
     flex-direction: column;
@@ -58,6 +60,8 @@ img {
     text-align: start;
     justify-content: center;
     animation: move-from-left 1s ease-in-out;
+    font-family: 'Pixelify Sans', sans-serif;
+    /*border: 1px solid black;*/
 }
 
 @keyframes move-from-left {
