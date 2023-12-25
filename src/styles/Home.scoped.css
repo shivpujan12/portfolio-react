@@ -4,12 +4,25 @@
     flex-direction: row;
     justify-content: space-around;
     font-family: "Montserrat", serif;
-    min-height: 90vh;
+    overflow: hidden;
+    height: 80vh;
 }
 
 .circular-image {
     display: none;
 }
+
+.poster{
+    background-image: url("../assets/test2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
 
 img {
     max-width:500px;

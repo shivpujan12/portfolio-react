@@ -49,7 +49,6 @@ export default function Home(){
                    className="github social">
                     <FontAwesomeIcon icon={faGithub} size="2x"/>
                 </a>
-
             </div>
         </>
     )
