@@ -9,6 +9,12 @@ export default function Home(){
     return (
         <>
             <div className="container">
+                <div className="fade-img">
+                    <img src={SomeImage} alt="profile"/>
+                </div>
+                <div className="circular-image">
+                    <img src={SomeImage} alt="profile"/>
+                </div>
                 <div className="intro-text">
                     <li>hi!, I'm</li>
                     <li>Shivpujan yadav</li>
@@ -20,9 +26,6 @@ export default function Home(){
                             loop: true,
                         }}
                     />
-                </div>
-                <div className="fade-img">
-                    <img src={SomeImage} alt="profile"/>
                 </div>
             </div>
             <div className="bottom">

@@ -4,12 +4,16 @@
     flex-direction: row;
     justify-content: space-around;
     font-family: "Montserrat", serif;
-    height: 90vh;
+    min-height: 90vh;
+}
+
+.circular-image {
+    display: none;
 }
 
 img {
     max-width:500px;
-    max-height:95%;
+    min-height:95%;
     width: auto;
     height: auto;
     filter: grayscale(100%);
@@ -22,7 +26,7 @@ img {
 .fade-img {
     position: relative;
     right: 0;
-    animation: move-from-right 1s ease-in-out;
+    animation: move-from-left 1s ease-in-out;
 }
 
 @keyframes move-from-right {
@@ -37,7 +41,7 @@ img {
     left: 0;
     right: 0;
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 100%);
-    height: 40%;
+    min-height: 40%;
 }
 
 .fade-img:before {
@@ -45,13 +49,13 @@ img {
     top: 15%;
     left: -15%;
     fill: #023F92;
-    width: 50vmax;
+    max-width: 50vmax;
     z-index: -1;
     transform-origin: 50% 50%;
 }
 
 .intro-text{
-    width: 50%;
+    max-width: 50%;
     display: flex;
     color: black;
     flex-direction: column;
@@ -59,7 +63,7 @@ img {
     font-weight: bold;
     text-align: start;
     justify-content: center;
-    animation: move-from-left 1s ease-in-out;
+    animation: move-from-right 1s ease-in-out;
     font-family: 'Pixelify Sans', sans-serif;
     /*border: 1px solid black;*/
 }
@@ -71,5 +75,46 @@ img {
 
 .intro-text li{
     list-style-type: none;
+}
+
+@media only screen and (max-width: 40rem) {
+
+    .container{
+        margin-top: 12%;
+    }
+
+    .intro-text {
+        position: absolute;
+        display: block;
+        max-width: 100%;
+        text-align: center;
+        font-size: 250%;
+        font-weight: bold;
+        padding: 10px;
+        margin: 10px;
+        top:55%;
+    }
+
+    .fade-img {
+        display: none;
+    }
+
+    .circular-image{
+        display: block;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        border:  1px solid #e5e5e5;
+    }
+
+    .circular-image img{
+        position: relative;
+        width: 120%;
+        height: auto;
+        left: -16%;
+        top: -2%;
+    }
 
 }

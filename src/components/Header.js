@@ -47,6 +47,7 @@ export default function() {
             navigate("/home")
         }
     }
+
     return (
         <div className="navbar">
             <div className="nav-items">
@@ -61,6 +62,18 @@ export default function() {
                 ><a href="/">Projects</a></li>
                 {/*<li><a href="/about"></a></li>*/}
             </div>
+            <div className="mobile-menu">
+                <li ref={resumeRef}
+                    onClick={(e) => setClassName(e, "resume")}
+                ><a href="/">Resume</a></li>
+                <li ref={homeRef} className="active"
+                    onClick={(e) => setClassName(e, "home")}
+                ><a href="/">&lt;dev-shivpujan /&gt;</a></li>
+                <li ref={projectsRef}
+                    onClick={(e) => setClassName(e, "projects")}
+                ><a href="/">Projects</a></li>
+            </div>
         </div>
+
     )
 }
