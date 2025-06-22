@@ -13,7 +13,7 @@
 }
 
 .poster{
-    background-image: url("../assets/test2.jpeg");
+    background-image: url("../../public/assets/img/profile-image.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

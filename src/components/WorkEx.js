@@ -1,7 +1,3 @@
-import internCert from "../assets/internCert.png";
-import internCert2 from "../assets/internCert2.png";
-import cheggCert from "../assets/cheggCert.png";
-import srijanHeader from "../assets/srijanHeader.png";
 import {useRef, useState} from "react";
 import "../styles/WorkEx.scoped.css"
 
@@ -9,14 +5,14 @@ export default function WorkEx() {
     const containerRef = useRef(null);
     const [projects, setProjects] = useState([
         {name: "Android Dev Intern",
-            image: internCert,
+            image: "/assets/img/internCert.png",
             desc: "Worked on the Android app of the company. Implemented a new feature to the app and fixed bugs in the existing codebase. Also worked on the backend of the app using Firebase."
         },
-        {name: "Android Dev Intern", image: internCert2,
+        {name: "Android Dev Intern", image: "/assets/img/internCert2.png",
         desc: "Hired as an Android developer intern. Worked on the Android app of the company."},
-        {name: "Chegg Expert", image: cheggCert,
+        {name: "Chegg Expert", image: "/assets/img/cheggCert.png",
         desc: "Worked as a Chegg Expert. Helped students with their doubts in Computer Science and Programming."},
-        {name: "Lead Editor", image: srijanHeader,
+        {name: "Lead Editor", image: "/assets/img/srijanHeader.png",
         desc: "Worked as a Lead Editor for the college magazine. Was responsible for the content of the magazine."}
     ]);
     return (

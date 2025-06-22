@@ -1,4 +1,3 @@
-import SomeImage from "../assets/test2.jpeg";
 import '../styles/Bottom.scoped.css';
 import '../styles/Home.scoped.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -10,10 +9,10 @@ export default function Home(){
         <>
             <div className="container">
                 <div className="fade-img">
-                    <img src={SomeImage} alt="profile"/>
+                    <img src={'/assets/img/profile-image.jpeg'} alt="profile"/>
                 </div>
                 <div className="circular-image">
-                    <img src={SomeImage} alt="profile"/>
+                    <img src={"/assets/img/profile-image.jpeg"} alt="profile"/>
                 </div>
                 <div className="intro-text">
                     <li>hi!, I'm</li>

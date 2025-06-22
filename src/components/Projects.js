@@ -1,15 +1,6 @@
 import {useEffect, useRef} from "react";
 import "../styles/Projects.scoped.css";
-import codeArenaImage from "../assets/code-arena.png";
-// import mindMattersImage from "../assets/mind-matters.png";
-import mindMattersImage from "../assets/mind-matters-shot2.png";
-import ducsAlumniImage from "../assets/ducs-alumni.png";
-import dpsImage from "../assets/dps-image.png"
-import {Link, Outlet, Route, Routes, useNavigate} from "react-router-dom";
-import WebProject from "./WebProject";
-import AndroidProject from "./AndroidProject";
-import WorkEx from "./WorkEx";
-
+import {Link, Outlet} from "react-router-dom";
 
 export default function Projects(){
 
@@ -17,7 +8,6 @@ export default function Projects(){
     const androidRef = useRef(null);
     const workEx = useRef(null);
     const navbarRef = useRef(null);
-    const navigate = useNavigate();
 
     const handleScroll = () => {
         const sticky = navbarRef.current.offsetTop;
