@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "WorkSans";
+    src: url('/public/assets/fonts/Work_Sans/static/WorkSans-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "InterRegular";
+    src: url('/public/assets/fonts/Inter/static/Inter_24pt-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "InterBold";
+    src: url('/public/assets/fonts/Inter/static/Inter_24pt-Bold.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.work-sans-regular {
+    font-family: WorkSans, Roboto, serif;
+}
+.inter-regular {
+    font-family: InterRegular, Roboto, serif;
+}
+.inter-bold {
+    font-family: InterBold, Roboto, serif;
+}
