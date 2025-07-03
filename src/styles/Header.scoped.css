@@ -5,10 +5,55 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 1280px;
-    margin-top: 8px;
-    padding: 8px;
+    padding: 16px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
+    /*background: #f8f6ed;*/
+    position: fixed;
+    top: 10px;
+    left:50%;
+    transform: translate(-50%);
+    width: 100%;
+    /*box-shadow: rgba(58, 58, 58, 0.25) 3px 3px 3px 3px;*/
+    /*transition: all 1s ease-in-out;*/
+    /*border: 0.5px solid rgba(0, 0, 0, 0.11);*/
+}
+
+.white-navbar {
+    transition: all 0.7s ease-in-out;
+    bottom: 12px;
+    /*transform: translate(-50%,calc(100vh - 24px - 100%));*/
+    width: 642px;
+    top: unset;
+    /*position: fixed;*/
+    overflow: hidden;
+    background-color: rgba(58, 58, 58, 0.77);
+    border: 1px solid rgba(58, 58, 58, 0.77);
+    animation: expandWidth 0.8s ease-in;
+    .nav-logo{
+        background: white;
+        color: black;
+        display: none;
+    }
+    .nav-items {
+        color: white;
+    }
+    .active::after{
+        background-color: white;
+    }
+}
+
+@keyframes expandWidth {
+    0% {
+        width: 0px;
+        border: 1px solid white;
+        background-color: rgb(58, 58, 58);
+    }
+    100% {
+        border: 1px solid rgba(58, 58, 58, 0.77);
+        width: 642px;
+        background-color: rgba(58, 58, 58, 0.77);
+    }
 }
 
 .nav-logo {
@@ -18,6 +63,7 @@
     padding: 10px 15px 10px 15px;
     width: fit-content;
     cursor: pointer;
+    transition: all 0.4s linear;
 }
 
 .mobile-menu{
@@ -26,7 +72,7 @@
 
 .nav-items{
     display: flex;
-    flex: 0.9;
+    flex: 1;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -35,7 +81,19 @@
 .nav-items li{
     list-style-type: none;
     cursor: pointer;
+}
+
+a {
     padding: 0px 24px;
+}
+
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    color: inherit;
 }
 
 .active{

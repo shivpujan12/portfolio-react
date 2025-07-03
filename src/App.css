@@ -1,3 +1,8 @@
+body {
+    /*background: rgb(219, 255, 219) url('/public/assets/img/paper.svg');*/
+    background: url('/public/assets/img/monkey-paper.jpg') repeat 0 0;
+}
+
 @font-face {
     font-family: "WorkSans";
     src: url('/public/assets/fonts/Work_Sans/static/WorkSans-Regular.ttf') format("truetype");
@@ -25,4 +30,15 @@
 }
 .inter-bold {
     font-family: InterBold, Roboto, serif;
+}
+
+.container{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-space {
+    margin-top: 120px;
+    margin-bottom: 120px;
 }

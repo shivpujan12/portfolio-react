@@ -1,0 +1,16 @@
+.about-me {
+    background-color: black;
+    width: 100%;
+    color: white;
+    /*border-radius: 50px;*/
+}
+
+.container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    font-size: 48px;
+}
+
+.intended {
+    padding: 0px 40px;
+}

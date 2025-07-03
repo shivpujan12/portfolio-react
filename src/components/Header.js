@@ -1,17 +1,20 @@
 import '../styles/Header.scoped.css';
 
-const Header = ()=> {
+const Header = ({activeSection})=> {
+
+    const color = activeSection==="about-me" ? "white-navbar" : "black-navbar";
 
     return (
-        <nav className={'navbar inter-regular'}>
+        <nav id={'navbar'} className={`navbar inter-regular ${color}`}
+        >
             <div className={'nav-logo inter-bold'}>{`<CodeByShiv/>`}</div>
             <div className={'nav-items'}>
-                <li className={'active'}>Home</li>
-                <li>About</li>
-                <li>Experience</li>
-                <li>Projects</li>
-                <li>Skills</li>
-                <li>Contact</li>
+                <a href={'#hero'}>Home</a>
+                <a href={'#about-me'}>About</a>
+                <a href={'#'}>Experience</a>
+                <a href={'#'}>Projects</a>
+                <a href={'#'}>Skills</a>
+                <a href={'#'}>Contact</a>
             </div>
         </nav>
     )
