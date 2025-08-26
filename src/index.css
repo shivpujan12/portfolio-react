@@ -15,6 +15,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* Keep I-beam for text inputs/areas for usability */
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], textarea {
+  cursor: text;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

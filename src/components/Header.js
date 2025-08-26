@@ -11,10 +11,10 @@ const Header = ({activeSection})=> {
             <div className={'nav-items'}>
                 <a href={'#hero'}>Home</a>
                 <a href={'#about-me'}>About</a>
-                <a href={'#'}>Experience</a>
-                <a href={'#'}>Projects</a>
-                <a href={'#'}>Skills</a>
-                <a href={'#'}>Contact</a>
+                <a href={'#experienc'}>Experience</a>
+                <a href={'#projects'}>Projects</a>
+                <a href={'#skills'}>Skills</a>
+                <a href={'#contact'}>Contact</a>
             </div>
         </nav>
     )
