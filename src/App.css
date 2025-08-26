@@ -1,7 +1,9 @@
 body {
     /*background: rgb(219, 255, 219) url('/public/assets/img/paper.svg');*/
-    background: url('/public/assets/img/monkey-paper.jpg') repeat 0 0;
+    /*background: url('/public/assets/img/monkey-paper.jpg') repeat 0 0;*/
+    /*background: url('../public/assets/img/noise.svg');*/
 }
+
 
 @font-face {
     font-family: "WorkSans";

@@ -1,51 +1,47 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
-import Header from "./components/Header";
 import Home from "./components/Home";
-import About from "./components/About";
-import {useEffect, useRef, useState} from "react";
+import Layout from "./components/Layout";
+import {useState} from "react";
+import './styles/Marquee.scoped.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {skillSet} from "./data";
+
+function MarqueeList({items}) {
+    // items = items.concat(skillSet);
+    return (
+        <div className="marquee-container">
+            <div className="marquee-overlay left"/>
+            <div className="marquee">
+                <div className="marquee-content">
+                    {items.concat(items).map((item, index) => (
+                        <div key={index} className="marquee-item">
+                            <FontAwesomeIcon icon={item.icon} title={item.title} style={{ fontSize: '28px', marginRight: '8px' }} />
+                            <span>{item.title}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="marquee-overlay right"/>
+        </div>
+    );
+}
+
+function Skills() {
+    return (
+        <div className={'skills-container'}>
+            <MarqueeList items={skillSet}/>
+        </div>
+    );
+}
 
 function App() {
-    const scrollRef = useRef();
-    const [activeSection, setActiveSection] = useState("");
-
-    useEffect(() => {
-        const observer = new MutationObserver(() => {
-            const activeLink = document.querySelector("#navbar a.active");
-            if (activeLink) {
-                const sectionId = activeLink.getAttribute("href").replace("#", "");
-                setActiveSection(sectionId);
-            }
-        });
-
-        const nav = document.querySelector("#navbar");
-        if (nav) {
-            observer.observe(nav, {
-                subtree: true,
-                attributes: true,
-                attributeFilter: ["class"],
-            });
-        }
-
-        return () => observer.disconnect();
-    }, []);
-
     return (
-      <div>
-          <Header activeSection={activeSection} />
-          <div
-              data-bs-spy="scroll"
-              data-bs-target="#navbar"
-              data-bs-offset="0"
-              ref={scrollRef}
-          >
-              <Home/>
-              <About/>
-          </div>
+        <Layout>
+            <Home/>
+            <Skills/>
 
-
-      </div>
+            {/*<About/>*/}
+        </Layout>
   );
 }
 
