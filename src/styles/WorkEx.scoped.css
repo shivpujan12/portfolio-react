@@ -1,45 +1,19 @@
+.workEx {
+    background: #1a1a1a;
+    width: 100%;
+    color: #c8c8c8;
+    font-family: "Montserrat", serif;
+    clip-path: polygon(0 0, 100% 100px, 100% 0, 100% 100%, 0 100%);
+}
+
 .container {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 2em;
-    font-size: 20px;
-    font-weight: bold;
+    max-width: 1200px;
+    margin: 0px auto;
 }
 
-.project {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 3em 2em 3em 2em;
+.workEx h1 {
+    font-size: 32px;
+    padding-bottom: 24px;
 }
 
-.project .project-img {
-    display: flex;
-    width: 70%;
-    height: 100%;
-    margin: 0 20px 0 0;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-}
 
-.project .project-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.project .project-info {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}

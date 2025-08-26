@@ -1,0 +1,105 @@
+.timeline {
+    display: grid;
+    row-gap: 20px;
+    place-items: center;
+    padding-top: 32px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    column-gap: 24px;
+    align-items: start;
+}
+
+.timeline-title {
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+    padding-top: 15px;
+}
+
+.timeline-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.timeline-content {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 12px 16px;
+    align-items: center;
+    background: rgba(55, 54, 54, 0.51);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 12px;
+    color: white;
+    width: 400px;
+}
+
+.brand-logo {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.brand-logo img,
+.brand-logo svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.role-description {
+    display: grid;
+    grid-auto-rows: min-content;
+    row-gap: 4px;
+    min-width: 0;
+}
+
+.role-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.role-duration,
+.role-location {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* Optional: timeline connector (vertical line + dot) */
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 120px;
+    top: 0;
+    bottom: -20px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.timeline-item:last-child::before {
+    bottom: 0;
+}
+
+.timeline-title::after {
+    content: "";
+    position: absolute;
+    left: 115px;
+    width: 10px;
+    height: 10px;
+    top: 18px;
+    /*transform: translateY(-50%);*/
+    background: #0d6efd;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}

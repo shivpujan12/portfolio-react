@@ -41,6 +41,11 @@ body {
 }
 
 .hero-space {
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.internal-section-space {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }

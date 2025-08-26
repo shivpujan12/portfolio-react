@@ -122,12 +122,9 @@
     max-width: 50%;
     color: black;
     flex-direction: column;
-    font-size: 48px;
+    font-size: 32px;
+    line-height: 1.3;
     text-align: start;
-    font-family: 'Monospaced Sans', sans-serif;
-    /*animation: move-from-right 1s ease-in-out;*/
-    /*font-family: 'Pixelify Sans', sans-serif;*/
-    /*border: 1px solid black;*/
 }
 
 @keyframes move-from-left {

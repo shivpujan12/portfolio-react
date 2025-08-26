@@ -1,45 +1,18 @@
 import './App.css';
 import Home from "./components/Home";
 import Layout from "./components/Layout";
-import {useState} from "react";
 import './styles/Marquee.scoped.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {skillSet} from "./data";
+import Skills from "./components/Skills";
+import About from "./components/About";
+import WorkEx from "./components/WorkEx";
 
-function MarqueeList({items}) {
-    // items = items.concat(skillSet);
-    return (
-        <div className="marquee-container">
-            <div className="marquee-overlay left"/>
-            <div className="marquee">
-                <div className="marquee-content">
-                    {items.concat(items).map((item, index) => (
-                        <div key={index} className="marquee-item">
-                            <FontAwesomeIcon icon={item.icon} title={item.title} style={{ fontSize: '28px', marginRight: '8px' }} />
-                            <span>{item.title}</span>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            <div className="marquee-overlay right"/>
-        </div>
-    );
-}
-
-function Skills() {
-    return (
-        <div className={'skills-container'}>
-            <MarqueeList items={skillSet}/>
-        </div>
-    );
-}
 
 function App() {
     return (
         <Layout>
             <Home/>
             <Skills/>
-
+            <WorkEx />
             {/*<About/>*/}
         </Layout>
   );
