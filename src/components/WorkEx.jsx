@@ -2,6 +2,7 @@ import "../styles/WorkEx.scoped.css"
 import "../styles/Timeline.scoped.css"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPersonWalking} from '@fortawesome/free-solid-svg-icons';
+import {journeySoFar} from "../data";
 
 export default function WorkEx() {
     return (
@@ -15,49 +16,38 @@ export default function WorkEx() {
 }
 
 const TimeLine = () => {
+
     return (
         <div className={'timeline'}>
-            <div className={'timeline-item'}>
-                <div className={'timeline-title'}>
-                    August '24
-                </div>
-                <div className={'timeline-content-container'}>
-                    <div className={'timeline-content'}>
-                        <div className={'brand-logo'}>
-                            <img src="/assets/img/userfacet-logo.jpeg" alt="userfacet-logo"/>
+            {
+                journeySoFar.map(journey => {
+                    return (
+                        <div className={'timeline-item'}>
+                            <div className={'timeline-title'}>
+                                {journey.timeline_title}
+                            </div>
+                            <div className={'timeline-content-container'}>
+                                {journey.content.map(content => {
+                                    return (<WorkExCard content={content} />)
+                                })}
+                            </div>
                         </div>
-                        <div className={'role-description'}>
-                            <div className={'role-title'}>Software Engineer</div>
-                            <div className={'role-duration'}> 1 year 8 months</div>
-                            <div className={'role-location'}> Bengaluru</div>
-                        </div>
-                    </div>
-                    <div className={'timeline-content'}>
-                        <div className={'brand-logo'}>
-                            <img src="/assets/img/buildux-logo.jpeg" alt="buildux-logo"/>
-                        </div>
-                        <div className={'role-description'}>
-                            <div className={'role-title'}>Software Engineer</div>
-                            <div className={'role-duration'}> 1 year 8 months</div>
-                            <div className={'role-location'}> Bengaluru</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className={'timeline-item'}>
-                <div className={'timeline-title'}>
-                    January '24
-                </div>
-                <div className={'timeline-content'}>
-                    <div className={'brand-logo'}>
-                        <img src="/assets/img/userfacet-logo.jpeg" alt="userfacet-logo"/>
-                    </div>
-                    <div className={'role-description'}>
-                        <div className={'role-title'}>Software Engineer Intern</div>
-                        <div className={'role-duration'}> 6 Months</div>
-                        <div className={'role-location'}> Bengaluru</div>
-                    </div>
-                </div>
-            </div>
+                    )
+                })
+            }
         </div>)
+}
+
+const WorkExCard = ({content}) => {
+    return (<div className={'timeline-content'}>
+        <div className={'brand-logo'}>
+            <img src={content.brand_logo} alt={content.role_title} />
+        </div>
+        <div className={'role-description'}>
+            {content.role_title && <div className={'role-title'}>{content.role_title}</div>}
+            {content.role_company && <div className={'role-company'}>{content.role_company}</div>}
+            {content.role_duration && <div className={'role-duration'}>{content.role_duration}</div>}
+            {content.role_location && <div className={'role-location'}>{content.role_location}</div>}
+        </div>
+    </div>)
 }
