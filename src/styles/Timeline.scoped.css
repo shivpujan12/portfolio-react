@@ -24,6 +24,11 @@
     flex-direction: column;
     gap: 8px;
 }
+.right-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
 
 .timeline-content {
     display: grid;
@@ -109,4 +114,20 @@
     background: #0d6efd;
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.extra-content {
+    /*border: 1px solid rgba(131, 131, 131, 0.37);*/
+    width: 200px;
+    font-size: 13px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(145, 145, 145, 0.22);
+    border-radius: 10px;
+    padding: 12px;
+    gap: 12px;
+}
+.achievement{
+    text-align: justify-all;
 }

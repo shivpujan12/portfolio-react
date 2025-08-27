@@ -26,10 +26,29 @@ const TimeLine = () => {
                             <div className={'timeline-title'}>
                                 {journey.timeline_title}
                             </div>
-                            <div className={'timeline-content-container'}>
-                                {journey.content.map(content => {
-                                    return (<WorkExCard content={content} />)
-                                })}
+                            <div className={'right-container'}>
+                                <div className={'timeline-content-container'}>
+                                    {journey.content.map(content => {
+                                        return (<WorkExCard content={content}/>)
+                                    })}
+                                </div>
+                                {<div className={'extra-content'}>
+                                    {journey.extra && <div className={'skills'}>
+                                        Skills Unlocked: <br/>
+                                        {journey.extra.skills}
+                                    </div>}
+                                    <div className={"achievements"}>
+                                        {journey.extra.achievements && <>Achievements: <br/></>}
+                                    {
+                                        journey.extra &&
+                                        journey.extra.achievements &&
+                                        journey.extra.achievements.map(achievement => {
+                                            return (<li className={'achievement'}>{achievement}</li>)
+                                        })
+                                    }
+                                    </div>
+                                </div>
+                                }
                             </div>
                         </div>
                     )

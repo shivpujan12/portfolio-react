@@ -77,7 +77,10 @@ export const journeySoFar = [
                 "role_duration": "1 year 8 months",
                 "role_location": "Bengaluru"
             }
-        ]
+        ],
+        "extra": {
+            "skills": "NodeJs, ReactJS, NextJS, RAG",
+        }
     },
     {
         "timeline_title": "January '24",
@@ -87,7 +90,10 @@ export const journeySoFar = [
             "role_company": "USERFACET UXDESIGN AND FUTURELAB LLP",
             "role_duration": "6 months",
             "role_location": "Bengaluru"
-        }]
+        }],
+        "extra": {
+            "skills": "React Native, Canvas API",
+        }
     },
     {
         "timeline_title": "October '21",
@@ -103,7 +109,16 @@ export const journeySoFar = [
             "role_company": "DUCS Community",
             "role_duration": "1 year",
             "role_location": "Delhi"
-        }]
+        }],
+        "extra": {
+            "skills": "DSA, Communication, empathy",
+            "achievements": [
+                "JNU AIR 19",
+                "MHCET AIR 27",
+                "BHU AIR 91",
+                "DU AIR 13"
+            ],
+        }
     },
     {
         "timeline_title": "August '20",
@@ -111,7 +126,14 @@ export const journeySoFar = [
             "brand_logo": "/assets/img/coffee-cups.png",
             "role_title": "Career Break",
             "role_location": "Mumbai"
-        }]
+        }],
+        "extra": {
+            "skills": "Survival Skills, Self Care",
+            "achievements": [
+                "Mental Peace",
+                "Survived COVID 19"
+            ]
+        }
     },
     {
         "timeline_title": "June '17",
@@ -130,7 +152,17 @@ export const journeySoFar = [
                 "role_duration": "3 year",
                 "role_location": "Mumbai"
             }
-        ]
+        ],
+        "extra": {
+            "skills": "Java, Android",
+            "achievements": [
+                "App ki Peshkash Winner",
+                "Syntech-X Winner",
+                "Maintained 9.83 CGPA",
+                "Received 64+ Stars for Location Picker Library",
+                "Location Picker Library Got listed on Android Arsenal"
+            ],
+        }
     },
     {
         "timeline_title": "June '15",
@@ -142,7 +174,10 @@ export const journeySoFar = [
                 "role_duration": "2 years",
                 "role_location": "Mumbai"
             },
-        ]
+        ],
+        "extra": {
+            "skills": "C++",
+        }
     },
     {
         "timeline_title": "June '05",
@@ -154,7 +189,15 @@ export const journeySoFar = [
                 "role_duration": "10 years",
                 "role_location": "Mumbai"
             },
-        ]
+        ],
+        "extra": {
+            "skills": "HTML, CSS, Javascript, C",
+            "achievements": [
+                "Won Math Olympiad Sliver Medal",
+                "87.40% in 10th Board",
+                "1st Ranker in English Language in 10th Board",
+                "2nd Position for Science Exhibition"],
+        }
     },
     {
         "timeline_title": "August 1999",
@@ -165,6 +208,9 @@ export const journeySoFar = [
                 "role_duration": "0 years",
                 "role_location": "Mumbai"
             },
-        ]
+        ],
+        "extra": {
+            "skills": "speaking, walking, & fighting"
+        }
     },
 ]
