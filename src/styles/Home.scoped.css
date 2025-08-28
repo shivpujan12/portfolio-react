@@ -7,7 +7,7 @@
     justify-content: space-between;
     gap: 48px;
     font-family: "Montserrat", serif;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .download-resume-btn {
@@ -176,4 +176,14 @@
         top: -2%;
     }
 
+}
+
+.info-bar {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    position: absolute;
+    right: -12px;
+    bottom: -25%;
+    border-radius: 50%;
 }

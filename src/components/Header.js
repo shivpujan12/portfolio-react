@@ -8,7 +8,6 @@ const Header = ({activeSection})=> {
             <div className={'nav-links'}>
                 <a href={'#about-me'}>About</a>
                 <a href={'#experienc'}>Experience</a>
-                <a href={'#projects'}>Projects</a>
             </div>
         </nav>
     )

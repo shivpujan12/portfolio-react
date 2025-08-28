@@ -5,6 +5,7 @@ import './styles/Marquee.scoped.css';
 import Skills from "./components/Skills";
 import About from "./components/About";
 import WorkEx from "./components/WorkEx";
+import Contact from "./components/Contact";
 
 
 function App() {
@@ -13,9 +14,14 @@ function App() {
             <Home/>
             <Skills/>
             <WorkEx />
+            <Contact />
             {/*<About/>*/}
         </Layout>
   );
 }
 
+
+
 export default App;
+
+
