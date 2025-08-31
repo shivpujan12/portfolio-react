@@ -179,11 +179,17 @@
 }
 
 .info-bar {
-    width: 100px;
+    width: 65%;
     height: 100px;
-    background-color: #000;
+    background-color: #1a1a1a;
     position: absolute;
-    right: -12px;
-    bottom: -25%;
-    border-radius: 50%;
+    right: -68px;
+    bottom: -164px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    span {
+        position: absolute;
+        right: 30px;
+        color: white;
+        top: 35px;
+    }
 }
