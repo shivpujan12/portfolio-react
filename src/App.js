@@ -8,13 +8,14 @@ import WorkEx from "./components/WorkEx";
 import Contact from "./components/Contact";
 
 
+
 function App() {
     return (
         <Layout>
             <Home/>
             <Skills/>
             <WorkEx />
-            <Contact />
+            {/*<Contact />*/}
             {/*<About/>*/}
         </Layout>
   );

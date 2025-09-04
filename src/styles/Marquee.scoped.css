@@ -53,3 +53,14 @@
         transform: translateX(-50%);
     }
 }
+
+@media (max-width: 768px) {
+   .marquee-container{
+       transform: none;
+   }
+
+    .marquee-item {
+        margin: 0 18px;
+        font-size: 18px;
+    }
+}

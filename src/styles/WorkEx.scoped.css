@@ -16,4 +16,16 @@
     padding-bottom: 24px;
 }
 
+@media (max-width: 768px) {
+    .workEx {
+        clip-path: none;
+    }
+
+    .internal-section-space {
+        padding-top:64px;
+        padding-bottom:64px;
+    }
+
+}
+
 

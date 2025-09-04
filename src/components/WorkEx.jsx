@@ -10,6 +10,7 @@ export default function WorkEx() {
             <div className={'container internal-section-space'}>
                 <h1><FontAwesomeIcon icon={faPersonWalking}/> &nbsp;Journey So far</h1>
                 <TimeLine/>
+                <MobileTimeLineView/>
             </div>
         </div>
     )
@@ -18,7 +19,7 @@ export default function WorkEx() {
 const TimeLine = () => {
 
     return (
-        <div className={'timeline'}>
+        <div className={'timeline mobile-display-none'}>
             {
                 journeySoFar.map(journey => {
                     return (
@@ -55,6 +56,32 @@ const TimeLine = () => {
                 })
             }
         </div>)
+}
+
+const MobileTimeLineView = () => {
+    return (
+        <div className={'mobile-timeline not-mobile-display-none'}>
+            {
+                journeySoFar.map(journey => {
+                    return (
+                        <div className={'mobile-timeline-item'}>
+                            <div className={'timeline-title'}>{
+                                journey.timeline_title
+                            }</div>
+                            <div className={'timeline-content-container'}>
+                                {
+                                    journey.content.map(content => {
+                                        return (<WorkExCard content={content}/> )
+                                    })
+                                }
+                            </div>
+
+                        </div>
+                    )
+                })
+            }
+        </div>
+    )
 }
 
 const WorkExCard = ({content}) => {

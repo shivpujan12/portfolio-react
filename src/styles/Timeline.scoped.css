@@ -3,6 +3,7 @@
     row-gap: 20px;
     place-items: center;
     padding-top: 32px;
+    color:white;
 }
 
 .timeline-item {
@@ -130,4 +131,58 @@
 }
 .achievement{
     text-align: justify-all;
+}
+
+
+.mobile-timeline {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mobile-timeline-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .timeline-title {
+        font-size: 32px;
+        opacity: 0.8;
+        font-weight: 700;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: rgba(200, 200, 200, 0.7);
+        text-transform: uppercase;
+        text-align: start;
+        padding-top: 32px;
+    }
+
+    .timeline-title::after {
+        position: absolute;
+        left: -24px;
+        top: 48px;
+    }
+
+    .timeline-content {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+.mobile-timeline-item:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 2px;
+    left: -20px;
+    top: 48px;
+    bottom: -20px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+
+@media (max-width: 768px) {
+    .workEx {
+        padding: 0 32px;
+    }
 }

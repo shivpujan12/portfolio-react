@@ -18,5 +18,12 @@
         color: black;
         padding: 8px 12px;
     }
+}
+
+@media (max-width: 768px) {
+    .nav-logo {
+        text-align: center;
+        width: 100%
+    }
 
 }
