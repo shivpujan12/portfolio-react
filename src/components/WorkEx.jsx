@@ -1,7 +1,7 @@
 import "../styles/WorkEx.scoped.css"
 import "../styles/Timeline.scoped.css"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faPersonWalking} from '@fortawesome/free-solid-svg-icons';
+import {faCircleInfo, faPersonWalking} from '@fortawesome/free-solid-svg-icons';
 import {journeySoFar} from "../data";
 
 export default function WorkEx() {
@@ -67,7 +67,14 @@ const MobileTimeLineView = () => {
                         <div className={'mobile-timeline-item'}>
                             <div className={'timeline-title'}>{
                                 journey.timeline_title
-                            }</div>
+                            }
+                                <div className={'extra-content-icon'}
+                                     onClick={() => {
+                                     }}
+                                >
+                                    <FontAwesomeIcon icon={faCircleInfo}/>
+                                </div>
+                            </div>
                             <div className={'timeline-content-container'}>
                                 {
                                     journey.content.map(content => {

@@ -156,6 +156,16 @@
         padding-top: 32px;
     }
 
+    .extra-content-icon {
+        /*display: inline-block;*/
+        display: none;
+        font-size: 24px;
+        width: 16px;
+        height: 16px;
+        padding-left: 12px;
+        vertical-align: center;
+    }
+
     .timeline-title::after {
         position: absolute;
         left: -24px;
