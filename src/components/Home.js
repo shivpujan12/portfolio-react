@@ -7,7 +7,7 @@ export default function Home(){
     return (
         <div id={'hero'} className="container hero-space">
             <div className="hero-image">
-                <img src={'/assets/img/hero-image.jpg'} alt="profile"/>
+                <img src={'/assets/img/shivpujan.png'} alt="profile"/>
                 {/*<img src={'/assets/img/profile-2.png'} alt="profile"/>*/}
             </div>
             <div className="intro-text">

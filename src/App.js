@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 import WorkEx from "./components/WorkEx";
 import Contact from "./components/Contact";
+import {useEffect, useState} from "react";
 
 
 
@@ -16,11 +17,33 @@ function App() {
             <Skills/>
             <WorkEx />
             <Contact />
+            <Mascot />
             {/*<About/>*/}
         </Layout>
   );
 }
 
+
+const Mascot = () => {
+
+    const [mascot, setMascot] = useState({
+        reaction: "🙂",
+        x:"0",
+        y:"0",
+    });
+
+    useEffect(()=>{
+
+    },[])
+
+    return(
+        <div className="mascot" style={{
+            transform: `translate(-${mascot.x}px, -${mascot.y}px)`,
+        }}>
+            {mascot.reaction}
+        </div>
+    )
+}
 
 
 export default App;

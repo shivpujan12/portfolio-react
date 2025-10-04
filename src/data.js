@@ -124,14 +124,12 @@ export const journeySoFar = [
         "timeline_title": "August '20",
         "content": [{
             "brand_logo": "/assets/img/coffee-cups.png",
-            "role_title": "Career Break",
+            "role_title": "Freelance",
             "role_location": "Mumbai"
         }],
         "extra": {
-            "skills": "Survival Skills, Self Care",
+            "skills": "Communication, Development Speed",
             "achievements": [
-                "Mental Peace",
-                "Survived COVID 19"
             ]
         }
     },
@@ -160,7 +158,7 @@ export const journeySoFar = [
                 "Syntech-X Winner",
                 "Maintained 9.83 CGPA",
                 "Received 64+ Stars for Location Picker Library",
-                "Location Picker Library Got listed on Android Arsenal"
+                "Location Picker Library got listed on Android Arsenal"
             ],
         }
     },

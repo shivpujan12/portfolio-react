@@ -3,7 +3,7 @@
     width: 100%;
     color: #c8c8c8;
     font-family: "Montserrat", serif;
-    clip-path: polygon(0 0, 100% 100px, 100% 0, 100% 100%, 0 100%);
+    /*clip-path: polygon(0 0, 100% 100px, 100% 0, 100% 100%, 0 100%);*/
 }
 
 .container {
