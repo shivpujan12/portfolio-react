@@ -1,15 +1,39 @@
-import "../styles/WorkEx.scoped.css"
+import "../styles/Main.scoped.css"
 import "../styles/Timeline.scoped.css"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCircleInfo, faPersonWalking} from '@fortawesome/free-solid-svg-icons';
-import {journeySoFar} from "../data";
+import {
+    faCircleInfo, faFolderOpen,
+    faLaptopCode,
+    faNetworkWired,
+    faPersonWalking,
+    faProjectDiagram
+} from '@fortawesome/free-solid-svg-icons';
+import {journeySofar, tabTypes} from "../data";
+import {useState} from "react";
 
-export default function WorkEx() {
+export default function Main() {
+    const [activeTab, setActiveTab] = useState(tabTypes[0]);
     return (
-        <div className={'workEx'}>
+        <div className={'Main'}>
             <div className={'container internal-section-space'}>
-                <h1><FontAwesomeIcon icon={faPersonWalking}/> &nbsp;Journey So far</h1>
-                <TimeLine/>
+                <div className={'tab-container'}>
+                    {
+                        tabTypes.map((tab,index) => {
+                            const isActive = activeTab.id === tab.id;
+                            return (
+                                <h1 className={`${isActive ? 'glass tab-active ' : ''}`}>
+                                    <span className={'tab-icon'} onClick={() => setActiveTab(tab)}>
+                                        <FontAwesomeIcon icon={tab.icon}/>
+                                    </span>
+                                    <span className={`${activeTab.id===tab.id ? 'active' : ""} tab-name`}>
+                                        {tab.title}
+                                    </span>
+                                </h1>
+                            )
+                        })
+                    }
+                </div>
+                <TimeLine />
                 <MobileTimeLineView/>
             </div>
         </div>
@@ -21,7 +45,7 @@ const TimeLine = () => {
     return (
         <div className={'timeline mobile-display-none'}>
             {
-                journeySoFar.map(journey => {
+                journeySofar.map(journey => {
                     return (
                         <div className={'timeline-item'}>
                             <div className={'timeline-title'}>
@@ -30,7 +54,7 @@ const TimeLine = () => {
                             <div className={'right-container'}>
                                 <div className={'timeline-content-container'}>
                                     {journey.content.map(content => {
-                                        return (<WorkExCard content={content}/>)
+                                        return (<JourneyCard content={content}/>)
                                     })}
                                 </div>
                                 {<div className={'extra-content'}>
@@ -62,7 +86,7 @@ const MobileTimeLineView = () => {
     return (
         <div className={'mobile-timeline not-mobile-display-none'}>
             {
-                journeySoFar.map(journey => {
+                journeySofar.map(journey => {
                     return (
                         <div className={'mobile-timeline-item'}>
                             <div className={'timeline-title'}>{
@@ -78,7 +102,7 @@ const MobileTimeLineView = () => {
                             <div className={'timeline-content-container'}>
                                 {
                                     journey.content.map(content => {
-                                        return (<WorkExCard content={content}/> )
+                                        return (<JourneyCard content={content}/> )
                                     })
                                 }
                             </div>
@@ -91,7 +115,7 @@ const MobileTimeLineView = () => {
     )
 }
 
-const WorkExCard = ({content}) => {
+const JourneyCard = ({content}) => {
     return (<div className={'timeline-content'}>
         <div className={'brand-logo'}>
             <img src={content.brand_logo} alt={content.role_title} />

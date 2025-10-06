@@ -9,7 +9,7 @@ import {
     faNodeJs,
     faReact
 } from "@fortawesome/free-brands-svg-icons";
-import {faDatabase, faMobileAlt} from "@fortawesome/free-solid-svg-icons";
+import {faDatabase, faFolderOpen, faLaptopCode, faMobileAlt, faPersonWalking} from "@fortawesome/free-solid-svg-icons";
 
 export const skillSet = [
     {
@@ -58,8 +58,25 @@ export const skillSet = [
     },
 ]
 
+export const tabTypes = [
+    {
+        "id": "journey",
+        "title": "Journey so far",
+        "icon": faPersonWalking
+    },
+    {
+        id: "project",
+        "title": "Projects",
+        "icon": faFolderOpen
+    },
+    {
+        id: "work",
+        "title": "Work Ex",
+        "icon": faLaptopCode
+    }
+]
 
-export const journeySoFar = [
+export const journeySofar = [
     {
         "timeline_title": "August '24",
         "content": [
@@ -103,7 +120,7 @@ export const journeySoFar = [
             "role_company": "University of Delhi",
             "role_duration": "3 year",
             "role_location": "Delhi"
-        },{
+        }, {
             "brand_logo": "/assets/img/srijan-logo.png",
             "role_title": "Srijan Lead Editor",
             "role_company": "DUCS Community",
@@ -129,8 +146,7 @@ export const journeySoFar = [
         }],
         "extra": {
             "skills": "Communication, Development Speed",
-            "achievements": [
-            ]
+            "achievements": []
         }
     },
     {
